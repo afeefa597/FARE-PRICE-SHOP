@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Special Kit Items</title>
+</head>
+<div class="basic" >
+		{% include "rationshopheader.html" %}
+	</div>
+<body>
+	<form action="addkititems1" method="POST">
+	{%csrf_token%}
+	<input type="text" placeholder="Specialkit_id" name="spkit_id"/><br>
+	<input type="text" placeholder="Specialkit Items" name="apkitem"/><br>
+	<input type="text" placeholder="Quantity" name="spkquantity"/><br>
+	<input type="submit" name="btn" value="Add Kit Items">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>

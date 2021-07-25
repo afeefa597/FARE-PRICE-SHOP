@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verify Complaint</title>
+	{%load static%}
+        <link rel="stylesheet" href="{% static 'table1.css' %}" >
+
+</head>
+<div class="basic" >
+		{% include "adminheader.html" %}
+	</div>
+<body>
+	
+<form action="viewacct1">
+<table id="customers">
+	 <tr>
+	 	<th>Rationshop_id</th>
+	 	<th>Place</th>
+	 	<th>Phone</th>
+	 	<th>Email</th>
+	 	
+	 {% for i in viact%}
+	 <tr>
+	 	<td>{{i.rashop_id}}</td>
+	 	<td>{{i.place}}</td>
+	 	<td>{{i.phone}}</td>
+	 	<td>{{i.email}}</td>
+	 	
+	 	
+	  {% endfor %}	
+	 </tr>
+	 
+
+</table><br>
+</form>
+
+</body>
+</html>

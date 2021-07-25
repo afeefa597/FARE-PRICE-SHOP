@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Application</title>
+</head>
+<div class="basic" >
+		{% include "customerheader.html" %}
+	</div>
+<body>
+	<form action="newapplication1" method="POST">
+	{%csrf_token%}
+	<input type="text" placeholder="Application_id" name="application_id" /><br>
+	<input type="text" placeholder="Name" name="name" /><br>
+	<input type="text" placeholder="Age" name="age" /><br>
+	<input type="text" placeholder="Gender" name="gender" /><br>
+	<input type="text" placeholder="Address" name="address" /><br>
+	<input type="text" placeholder="Contact" name="contact" /><br>
+	<input type="text" placeholder="Members_count" name="members_count" /><br>
+	<input type="text" placeholder="Anual_income" name="anual_income" /><br>
+	<input type="text" placeholder="Email" name="email" /><br>
+	<input type="submit" name="btn" value="Request">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complaint Action</title>
+</head>
+<div class="basic" >
+		{% include "adminheader.html" %}
+	</div>
+<body>
+	<form action="take_action1" method="POST">
+	{%csrf_token%}
+	<input type="text" placeholder="Action_id" name="action_id" /><br>
+	<input type="text" placeholder="Complaint_id" name="complaint_id" /><br>
+	<input type="text" placeholder="Action" name="action" /><br>
+	<input type="date" placeholder="Action_date" name="action_date" /><br>
+	<input type="text" placeholder="Redirect_to" name="redirect_to" /><br>
+	<input type="submit" name="btn" value="Action Proceed">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>

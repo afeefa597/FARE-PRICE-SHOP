@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Account</title>
+</head>
+<div class="basic" >
+        {% include "adminheader.html" %}
+    </div>
+<body>
+<form action="removeact1" method="POST">
+        {%csrf_token%}
+        
+    <label>Place</label><input type="text" name="place">
+    <label>Phone</label><input type="text" name="phone">
+    <input  type="submit" name="btn" value="Delete">
+    {{msg3}}
+    <br>
+    
+</body>
+</html>
+
+    

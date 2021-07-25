@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verify Complaint</title>
+	{%load static%}
+        <link rel="stylesheet" href="{% static 'table1.css' %}" >
+
+</head>
+<div class="basic" >
+		{% include "customerheader.html" %}
+	</div>
+<body>
+	
+<form action="viewcompaction1">
+<table id="customers">
+	 <tr>
+	 	<th>Action_id</th>
+	 	<th>Complaint_id</th>
+	 	<th>Action</th>
+	 	<th>Action_date</th>
+	 	<th>Redirect_to</th>
+	 	
+	 {% for i in vcmpact%}
+	 <tr>
+	 	<td>{{i.action_id}}</td>
+	 	<td>{{i.complaint_id}}</td>
+	 	<td>{{i.action}}</td>
+	 	<td>{{i.action_date}}</td>
+	 	<td>{{i.redirect_to}}</td>
+	 	
+	 	
+	  {% endfor %}	
+	 </tr>
+	 
+
+</table><br>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Register Client</title>
+</head>
+<link rel="stylesheet" href="{% static 'sample1.css' %}">
+
+<div class="basic" >
+		{% include "publicheader.html" %}
+	</div>
+<body>
+	<form action="registerclient1" method="POST">
+	{%csrf_token%}
+	
+	<input type="text" placeholder="SRC_no" name="src_no" /><br>
+	<input type="text" placeholder="Name" name="name" /><br>
+	<input type="text" placeholder="Age" name="age" /><br>
+	<input type="text" placeholder="Address" name="address" /><br>
+	<input type="text" placeholder="Total_members" name="total_members" /><br>
+	<input type="text" placeholder="Contact" name="contact" /><br>
+	<input type="text" placeholder="Email" name="email" /><br>	
+	<input type="submit" name="btn" value="Register">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>

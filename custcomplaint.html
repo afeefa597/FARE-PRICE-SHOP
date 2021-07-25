@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Complaint</title>
+</head>
+<div class="basic" >
+		{% include "customerheader.html" %}
+	</div>
+<body>
+	<form action="custcomplaint1" method="POST">
+	{%csrf_token%}
+	<input type="text" placeholder="Complaint_id" name="complaint_id" /><br>
+	<input type="text" placeholder="Customer_id" name="customer_id" /><br>
+	<input type="text" placeholder="Complaint" name="complaint" /><br>
+	<input type="date" placeholder="complaint_date" name="complaint_date" /><br>
+	<input type="text" placeholder="place" name="place" /><br>
+	<input type="text" placeholder="contact" name="contact" /><br>
+	<input type="submit" name="btn" value="Register Complaint">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>

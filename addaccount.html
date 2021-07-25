@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>Add account</title>
+</head>
+<link rel="stylesheet" href="{% static 'sample.css' %}">
+
+<div class="basic" >
+		{% include "adminheader.html" %}
+	</div>
+<body>
+	<form action="addacct1" method="POST">
+	{%csrf_token%}
+	<input type="text" placeholder="Account_id" name="act_id"/><br>
+	<input type="text" placeholder="Rationshop_id" name="rashop_id" /><br>
+	<input type="text" placeholder="Place" name="place" /><br>
+	<input type="text" placeholder="Phone" name="phone" /><br>
+	<input type="text" placeholder="Email" name="email" /><br>
+	<input type="submit" name="btn" value="Add Account">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>

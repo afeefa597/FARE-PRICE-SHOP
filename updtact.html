@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPDATE ACCOUNT</title>
+</head>
+<div class="basic" >
+		{% include "adminheader.html" %}
+	</div>
+<body>
+	<form action="updtact1" method="POST">
+		{%csrf_token%}
+	<label>ENTER OLD NUMBER:</label><input type="text" name="num"><br>
+	<label>ENTER NEW NUMBER:</label><input type="text" name="newnum"><br>
+	<input  type="submit" name="btn" value="UPDATE PHONE NUMBER"><br><br>
+	{{msg2}}
+
+</form>
+</body>
+</html>

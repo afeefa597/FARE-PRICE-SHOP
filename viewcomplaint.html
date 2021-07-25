@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verify Complaint</title>
+	{%load static%}
+        <link rel="stylesheet" href="{% static 'table1.css' %}" >
+
+</head>
+<div class="basic" >
+		{% include "rationshopheader.html" %}
+	</div>
+<body>
+	
+<form action="viewcomp1">
+<table id="customers">
+	 <tr>
+	 	<th>Complaint</th>
+	 	<th>Complaint_date</th>
+	 	<th>place</th>
+	 	
+	 {% for i in cmp%}
+	 <tr>
+	 	<td>{{i.complaint}}</td>
+	 	<td>{{i.complaint_date}}</td>
+	 	<td>{{i.place}}</td>
+	 	
+	 	
+	  {% endfor %}	
+	 </tr>
+	 
+
+</table><br>
+</form>
+
+</body>
+</html>

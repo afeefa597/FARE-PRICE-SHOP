@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Blue Items</title>
+</head>
+<div class="basic" >
+		{% include "rationshopheader.html" %}
+	</div>
+<body>
+	<form action="addbitems1" method="POST">
+	{%csrf_token%}
+	<input type="text" placeholder="Item_id" name="bitem_id"/><br>
+	<input type="text" placeholder="Items" name="bitem"/><br>
+	<input type="text" placeholder="Quantity" name="bquantity"/><br>
+	<input type="submit" name="btn" value="Add Items">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Application</title>
+	{%load static%}
+        <link rel="stylesheet" href="{% static 'table1.css' %}" >
+
+</head>
+<div class="basic" >
+		{% include "adminheader.html" %}
+	</div>
+<body>
+	
+<form action="viewappreq1">
+<table id="customers">
+	 <tr>
+	 	<th>Application_id</th>
+	 	<th>Name</th>
+	 	<th>Age</th>
+	 	<th>Gender</th>
+	 	<th>Address</th>
+	 	<th>Contact</th>
+	 	<th>Members_count</th>
+	 	<th>Anual_income</th>
+	 	<th>Email</th>
+	 {% for i in aprq%}
+	 <tr>
+	 	<td>{{i.application_id}}</td>
+	 	<td>{{i.name}}</td>
+	 	<td>{{i.age}}</td>
+	 	<td>{{i.gender}}</td>
+	 	<td>{{i.address}}</td>
+	 	<td>{{i.contact}}</td>
+	 	<td>{{i.members_count}}</td>
+	 	<td>{{i.anual_income}}</td>
+	 	<td>{{i.email}}</td>
+	 	
+	  {% endfor %}	
+	 </tr>
+	 
+
+</table><br>
+</form>
+
+</body>
+</html>

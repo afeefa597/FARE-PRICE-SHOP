@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Replay Request</title>
+	{%load static%}
+        <link rel="stylesheet" href="{% static 'table1.css' %}" >
+
+</head>
+<div class="basic" >
+		{% include "customerheader.html" %}
+	</div>
+<body>
+	
+	<form action="viewrqstreplay1">
+<table id="customers">
+	 <tr>
+	 	<th>Replay</th>
+	 	
+	 </tr>
+	 {% for i in aprqrp%}
+	 <tr>
+	 	<td>{{i.replay}}</td>
+	 	
+	 </tr>
+	 {% endfor %}
+
+</table><br>
+</form>
+
+</body>
+</html>

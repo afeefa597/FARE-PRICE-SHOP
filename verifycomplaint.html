@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verify Complaint</title>
+	{%load static%}
+        <link rel="stylesheet" href="{% static 'table1.css' %}" >
+
+</head>
+<div class="basic" >
+		{% include "adminheader.html" %}
+	</div>
+<body>
+	
+<form action="verifycomp1">
+<table id="customers">
+	 <tr>
+	 	<th>Compalint_id</th>
+	 	<th>Customer_id</th>
+	 	<th>Complaint</th>
+	 	<th>Complaint_date</th>
+	 	<th>Place</th>
+	 	<th>Contact</th>
+	 </tr>
+	 {% for i in vcomp%}
+	 <tr>
+	 	<td>{{i.complaint_id}}</td>
+	 	<td>{{i.customer_id}}</td>
+	 	<td>{{i.complaint}}</td>
+	 	<td>{{i.complaint_date}}</td>
+	 	<td>{{i.place}}</td>
+	 	<td>{{i.contact}}</td>
+	 	<td><a href="/take_action1/{{ i.complaint_id }}">Take Action</a></td>
+	  {% endfor %}	
+	 </tr>
+	 
+
+</table><br>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Replay</title>
+</head>
+<div class="basic" >
+		{% include "adminheader.html" %}
+	</div>
+<body>
+	<form action="rqstreplay1" method="POST">
+	{%csrf_token%}
+	<input type="text" placeholder="Replay" name="replay" /><br>
+	<input type="submit" name="btn" value="Request Proceed">
+	{{msg1}}
+	{{msg2}}
+</form>
+</body>
+</html>
